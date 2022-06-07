@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+</head>
+<body>
+
+    <nav> 
+        <span class="color__toggle" onclick="colorToggle()">Change Background Color</span>
+    </nav>
+
+    <div class="wrapper"> 
+        <div class="task__input">
+            <i class="fa fa-calendar date__icon" onclick="showCalendar()" aria-hidden="true"></i>
+            <input type="text" placeholder="Add a new task">
+        </div>
+        <div class="date__wrapper" id="datepicker">
+            <input type="text" class="date__input" id="dateSelector" placeholder="Due Date">
+            <button class="date__btn" >Set Date</button>
+        </div>
+        <div class="controls">
+            <div class="filters">
+                <span id="all" class="active">All</span>
+                <span id="pending">Pending</span>
+                <span id="completed">Completed</span>
+                <span id="due">Due</span>
+            </div>
+            <button class="clear__btn">Clear All</button>
+        </div>
+        <ul class="task__box"></ul>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

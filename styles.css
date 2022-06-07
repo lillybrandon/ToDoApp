@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,700;0,900;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background-color: #3c87ff;
+}
+
+nav {
+    height: 10vh;
+    width: 100;
+    max-width: 1200px;
+    position: relative;
+}
+
+
+#datepicker {
+    color: #000;
+    font-size: 16px;
+    border-radius: 10%;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform .2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.date__wrapper {
+    position: absolute;
+    margin-left: 190px;
+    top: 270px;
+    background-color: ivory;
+    border: 8px solid ivory;
+    display: flex;
+    flex-direction: column;
+}
+
+.date__btn {
+    background-color: ivory;
+    width: 75px;
+    margin-top: 8px;
+    margin-left: 50px;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.date__btn:hover {
+    opacity: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.date__wrapper input {
+    height: 32px;
+    font-size: 16px;
+    letter-spacing: .1em;
+    border-radius: 15%;
+    border: .05px solid black;
+}
+
+.date__input {
+    text-align: center;
+}
+
+
+.show__date {
+    transform: scale(1) !important;
+}
+
+.date__icon {
+    position: absolute;
+    margin-left: 350px;
+    margin-top: 18px;
+    opacity: .2;
+    cursor: pointer;
+}
+
+.date__icon:hover {
+    opacity: 1;
+}
+
+.wrapper {
+    max-width: 435px;
+    margin: 135px auto;
+    background: #fff;
+    border-radius: 7px;
+    padding: 28px 0;
+}
+
+.color__toggle {
+    position: absolute;
+    cursor: pointer;
+    width: 220px;
+    font-size: 12px;
+    margin-top: 100px;
+    margin-left: 100px;
+    border-radius: 200px;
+    border:none;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.task__input {
+    height: 52px;
+    padding: 0 25px;
+    position: relative;
+}
+
+.task__input img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(17px, -50%);
+}
+
+.task__input input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    padding: 0 20px 0 53px;
+}
+
+.task__input input::placeholder {
+    color: #bfbfbf;
+}
+
+.controls, li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls {
+    padding: 18px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.filters span {
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 17px;
+}
+
+.filters span:first-child {
+    margin-left: 0;
+}
+
+.filters span.active {
+    color: #3c87ff;
+}
+
+.controls .clear__btn {
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    margin-left: 16px;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 7px 13px;
+    color: #fff;
+    background: #3c87ff;
+}
+
+.task__box {
+    margin: 20px 25px;
+}
+
+.task__box .task {
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.task__box .task:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.task label {
+    display: flex;
+}
+
+.task label p.checked {
+    text-decoration: line-through;
+}
+
+.task label input {
+    margin-top: 6px;
+    margin-right: 12px;
+}
+
+.task .settings {
+    cursor: pointer;
+    position: relative;
+}
+
+.settings .task__menu {
+    position: absolute;
+    background: #fff;
+    padding: 5px 0;
+    right: -5px;
+    bottom: -65px;
+    border-radius: 4px;
+    z-index: 2;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform .2s ease;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.settings .task__menu.show {
+    transform: scale(1);
+} 
+ 
+.task__menu li{
+    height: 25px;
+    font-size: 16px;
+    padding: 17px 15px;
+    margin-bottom: 2px;
+    justify-content: flex-start;
+}
+
+.task__menu li:last-child {
+    margin-bottom: 0;
+}
+
+.task__menu li:hover {
+    background: #f5f5f5;
+}
+
+.task__menu li i {
+    padding-right: 8px;
+}
+
+
